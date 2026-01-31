@@ -1,0 +1,116 @@
+// Maleviç - Kırmızı Süvariler paleti
+// Açık tema, metin odaklı
+
+$bg: #f0e6d8;           // krem/bej (ufuk çizgisi)
+$text: #2a2520;         // koyu kahve (toprak)
+$link: #a63520;         // koyu kırmızı (süvariler)
+$muted: #6a7a8a;        // gri-mavi
+
+html, body {
+  background: $bg;
+  margin: 0;
+}
+
+body {
+  color: $text;
+  font-family: Georgia, serif;
+  font-size: 18px;
+  line-height: 1.7;
+}
+
+a {
+  color: $link;
+  text-decoration: none;
+  &:hover { text-decoration: underline; }
+}
+
+.w {
+  max-width: 640px;
+  margin: 0 auto;
+  padding: 3rem 2rem;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: normal;
+  color: $text;
+}
+
+h1 { font-size: 1.6rem; }
+h2, h3, h4 { margin-top: 2.5rem; }
+
+p { margin: 1rem 0; }
+
+hr {
+  border: none;
+  border-top: 1px solid darken($bg, 15%);
+  margin: 2rem 0;
+}
+
+blockquote {
+  margin: 1.5rem 0;
+  padding-left: 1rem;
+  border-left: 2px solid $muted;
+  color: $muted;
+  font-style: italic;
+  p { margin: 0; }
+}
+
+code {
+  font-family: Menlo, monospace;
+  font-size: 0.85em;
+  background: darken($bg, 8%);
+  padding: 0.1rem 0.3rem;
+}
+
+pre code {
+  display: block;
+  padding: 1rem;
+  overflow-x: auto;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+ul, ol {
+  padding-left: 1.2rem;
+}
+
+li { margin: 0.3rem 0; }
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  border: 1px solid darken($bg, 20%);
+  padding: 0.5rem;
+  text-align: left;
+}
+
+nav {
+  margin: 1rem 0;
+  color: $muted;
+  a { color: $link; }
+}
+
+header {
+  margin-bottom: 2rem;
+  p {
+    color: $muted;
+    font-style: italic;
+    margin: 0.3rem 0;
+  }
+}
+
+.post-meta {
+  color: $muted;
+  font-size: 0.9em;
+}
+
+::selection {
+  background: $link;
+  color: $bg;
+}
