@@ -1,0 +1,9 @@
+---
+layout: page
+title: "agamben"
+permalink: /tags/agamben/
+---
+
+{% for post in site.tags.agamben %}
+  <p>{{ post.date | date: "%d.%m.%Y" }} <a href="{{ post.url | relative_url }}">{{ post.title }}</a></p>
+{% endfor %}
