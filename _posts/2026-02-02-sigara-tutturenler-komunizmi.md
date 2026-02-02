@@ -1,7 +1,8 @@
 ---
 layout: post
-title: "Sigara Tüttürenler Komünizmi"
-tags: [felsefe]
+title: Tüttürenlerin Komünizmi - Mladen Dolar
+tags:
+  - felsefe
 ---
 
 *Dominique ve Oxana'ya*
