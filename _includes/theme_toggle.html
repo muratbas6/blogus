@@ -1,36 +1,39 @@
-<a href="#" id="theme-toggle" style="text-decoration:none;">dark mode</a>
-
+<script>
+(function() {
+  const saved = localStorage.getItem('theme');
+  if (saved === 'dark') {
+    document.body.dataset.theme = 'dark';
+    document.documentElement.style.background = '#1a1814';
+  }
+})();
+</script>
+<button id="theme-toggle" type="button" aria-label="Tema değiştir"></button>
 <script>
 (function() {
   const toggle = document.getElementById('theme-toggle');
   const body = document.body;
   const html = document.documentElement;
+  const bgLight = '#f0e6d8';
+  const bgDark = '#1a1814';
 
-  function updateToggle(isDark) {
-    if (isDark) {
-      body.setAttribute('a', 'dark');
-      html.style.background = '#1a1814';
-      toggle.textContent = 'light mode';
-    } else {
-      body.setAttribute('a', 'light');
-      html.style.background = '#f0e6d8';
-      toggle.textContent = 'dark mode';
-    }
+  function updateToggle() {
+    const isDark = body.dataset.theme === 'dark';
+    html.style.background = isDark ? bgDark : bgLight;
+    toggle.textContent = isDark ? 'light mode' : 'dark mode';
   }
 
-  const saved = localStorage.getItem('theme');
-  updateToggle(saved === 'dark');
+  updateToggle();
 
-  toggle.addEventListener('click', function(e) {
-    e.preventDefault();
-    const isDark = body.getAttribute('a') === 'dark';
+  toggle.addEventListener('click', function() {
+    const isDark = body.dataset.theme === 'dark';
     if (isDark) {
+      body.dataset.theme = 'light';
       localStorage.removeItem('theme');
-      updateToggle(false);
     } else {
+      body.dataset.theme = 'dark';
       localStorage.setItem('theme', 'dark');
-      updateToggle(true);
     }
+    updateToggle();
   });
 })();
 </script>

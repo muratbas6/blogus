@@ -99,6 +99,17 @@ nav {
   a { color: $link; }
 }
 
+#theme-toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: inherit;
+  color: $link;
+  padding: 0;
+  &:hover { text-decoration: underline; }
+}
+
 header {
   margin-bottom: 2.5rem;
   text-align: center;
@@ -140,11 +151,11 @@ $text-dark: #e0d8cc;
 $link-dark: #d4654a;
 $muted-dark: #8a9aaa;
 
-html:has(body[a="dark"]) {
+html:has(body[data-theme="dark"]) {
   background: $bg-dark;
 }
 
-body[a="dark"] {
+body[data-theme="dark"] {
   background: $bg-dark;
   color: $text-dark;
 
@@ -158,6 +169,7 @@ body[a="dark"] {
   hr { border-color: lighten($bg-dark, 15%); }
   th, td { border-color: lighten($bg-dark, 20%); }
   .post-meta { color: $muted-dark; }
+  #theme-toggle { color: $link-dark; }
   ::selection { background: $link-dark; color: $bg-dark; }
 }
 
