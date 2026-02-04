@@ -4,16 +4,10 @@
 (function() {
   const toggle = document.getElementById('theme-toggle');
   const body = document.body;
-  const html = document.documentElement;
 
   const saved = localStorage.getItem('theme');
   if (saved === 'dark') {
     body.setAttribute('a', 'dark');
-    html.style.background = '#1a1814';
-  } else {
-    body.setAttribute('a', 'light');
-    html.style.background = '#f0e6d8';
-    localStorage.removeItem('theme');
   }
 
   toggle.addEventListener('click', function(e) {
@@ -21,11 +15,9 @@
     const current = body.getAttribute('a');
     if (current === 'dark') {
       body.setAttribute('a', 'light');
-      html.style.background = '#f0e6d8';
       localStorage.removeItem('theme');
     } else {
       body.setAttribute('a', 'dark');
-      html.style.background = '#1a1814';
       localStorage.setItem('theme', 'dark');
     }
   });
