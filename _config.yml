@@ -29,6 +29,8 @@ goat_counter: mbas6
 # Build settings
 plugins:
   - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
 
 # no-style-please theme settings
 theme_config:
