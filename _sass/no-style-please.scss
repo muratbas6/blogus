@@ -139,6 +139,10 @@ $text-dark: #e0d8cc;
 $link-dark: #d4654a;
 $muted-dark: #8a9aaa;
 
+html:has(body[a="dark"]) {
+  background: $bg-dark;
+}
+
 body[a="dark"] {
   background: $bg-dark;
   color: $text-dark;
@@ -158,6 +162,10 @@ body[a="dark"] {
 
 // Auto mode (sistem tercihine göre)
 @media (prefers-color-scheme: dark) {
+  html:has(body[a="auto"]) {
+    background: $bg-dark;
+  }
+
   body[a="auto"] {
     background: $bg-dark;
     color: $text-dark;
