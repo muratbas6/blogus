@@ -9,5 +9,5 @@
 
 <nav>
 {%-for item in site.data.menu.entries-%}
-  <a href="{{ item.url | relative_url }}">{{ item.title }}</a> | {% endfor %}{%- include theme_toggle.html -%}
+  <a href="{{ item.url | relative_url }}">{{ item.title }}</a><span class="nav-sep" aria-hidden="true"> | </span>{% endfor %}{%- include theme_toggle.html -%}
 </nav>

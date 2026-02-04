@@ -4,11 +4,9 @@
   const toggle = document.getElementById('theme-toggle');
   const body = document.body;
   const html = document.documentElement;
-
-  // Renkler SCSS ile senkronize tutulmalı (_sass/no-style-please.scss)
   const colors = {
-    light: '#f0e6d8',
-    dark: '#1a1814'
+    light: '{{ site.theme_config.colors.bg_light }}',
+    dark: '{{ site.theme_config.colors.bg_dark }}'
   };
 
   function update() {
@@ -17,11 +15,6 @@
     toggle.textContent = isDark ? 'light mode' : 'dark mode';
   }
 
-  // Sayfa yüklenirken localStorage'dan tema al
-  const saved = localStorage.getItem('theme');
-  if (saved === 'dark') {
-    body.dataset.theme = 'dark';
-  }
   update();
 
   toggle.addEventListener('click', function() {

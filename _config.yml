@@ -39,3 +39,6 @@ theme_config:
   show_menu: true
   back_home_text: "< anasayfa"
   date_format: "%d.%m.%Y"
+  colors:
+    bg_light: "#f0e6d8"
+    bg_dark: "#1a1814"

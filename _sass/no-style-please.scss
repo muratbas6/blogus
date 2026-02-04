@@ -108,6 +108,7 @@ nav {
   border-top: 1px solid color.adjust($bg, $lightness: -10%);
   color: $muted;
   a { color: $link; }
+  .nav-sep { color: $muted; }
 }
 
 #theme-toggle {
@@ -177,7 +178,7 @@ body[data-theme="dark"] {
 
   h1, h2, h3, h4, h5, h6 { color: $text-dark; }
   a { color: $link-dark; }
-  nav { border-color: color.adjust($bg-dark, $lightness: 15%); color: $muted-dark; a { color: $link-dark; } }
+  nav { border-color: color.adjust($bg-dark, $lightness: 15%); color: $muted-dark; a { color: $link-dark; } .nav-sep { color: $muted-dark; } }
   header h1 a { color: $text-dark; &:hover { color: $link-dark; } }
   header p { color: $muted-dark; }
   blockquote { border-color: $muted-dark; color: $muted-dark; }
