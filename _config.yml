@@ -34,7 +34,7 @@ plugins:
 
 # no-style-please theme settings
 theme_config:
-  appearance: "auto"  # auto, light, dark
+  appearance: "light"  # auto, light, dark
   show_description: true
   show_menu: true
   back_home_text: "< anasayfa"
