@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Tüttürenlerin Komünizmi - Mladen Dolar
+date: 2026-02-02
 tags:
   - felsefe
 ---
