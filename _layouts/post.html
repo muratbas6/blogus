@@ -20,6 +20,9 @@ layout: default
 <article>
   <p class="post-meta">
     <time datetime="{{ page.date }}">{{ page.date | date: site.theme_config.date_format }}</time>
+    {%- if page.author -%}
+      · <a href="{{ "/authors/" | relative_url }}{{ page.author | slugify }}/">{{ page.author }}</a>
+    {%- endif -%}
     {%- if page.tags.size > 0 -%}
       · {% for tag in page.tags %}<a href="{{ "/tags/" | relative_url }}#{{ tag }}" class="tag">{{ tag }}</a>{% unless forloop.last %}, {% endunless %}{% endfor %}
     {%- endif -%}
