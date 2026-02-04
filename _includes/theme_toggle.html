@@ -1,0 +1,47 @@
+<button id="theme-toggle" aria-label="Tema değiştir" style="background:none;border:none;cursor:pointer;font-size:1.2em;padding:0;">
+  <span id="theme-icon">◐</span>
+</button>
+
+<script>
+(function() {
+  const toggle = document.getElementById('theme-toggle');
+  const icon = document.getElementById('theme-icon');
+  const body = document.body;
+
+  // Kaydedilmiş tema veya sistem tercihi
+  const saved = localStorage.getItem('theme');
+  if (saved) {
+    body.setAttribute('a', saved);
+  }
+
+  function updateIcon() {
+    const current = body.getAttribute('a');
+    if (current === 'dark') {
+      icon.textContent = '☀';
+    } else if (current === 'light') {
+      icon.textContent = '☾';
+    } else {
+      icon.textContent = '◐';
+    }
+  }
+
+  updateIcon();
+
+  toggle.addEventListener('click', function() {
+    const current = body.getAttribute('a');
+    let next;
+
+    if (current === 'auto') {
+      next = 'dark';
+    } else if (current === 'dark') {
+      next = 'light';
+    } else {
+      next = 'auto';
+    }
+
+    body.setAttribute('a', next);
+    localStorage.setItem('theme', next);
+    updateIcon();
+  });
+})();
+</script>
