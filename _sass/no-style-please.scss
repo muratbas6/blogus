@@ -132,3 +132,46 @@ header {
   background: $link;
   color: $bg;
 }
+
+// Dark mode
+$bg-dark: #1a1814;
+$text-dark: #e0d8cc;
+$link-dark: #d4654a;
+$muted-dark: #8a9aaa;
+
+body[a="dark"] {
+  background: $bg-dark;
+  color: $text-dark;
+
+  h1, h2, h3, h4, h5, h6 { color: $text-dark; }
+  a { color: $link-dark; }
+  nav { border-color: lighten($bg-dark, 15%); color: $muted-dark; a { color: $link-dark; } }
+  header h1 a { color: $text-dark; &:hover { color: $link-dark; } }
+  header p { color: $muted-dark; }
+  blockquote { border-color: $muted-dark; color: $muted-dark; }
+  code { background: lighten($bg-dark, 8%); }
+  hr { border-color: lighten($bg-dark, 15%); }
+  th, td { border-color: lighten($bg-dark, 20%); }
+  .post-meta { color: $muted-dark; }
+  ::selection { background: $link-dark; color: $bg-dark; }
+}
+
+// Auto mode (sistem tercihine göre)
+@media (prefers-color-scheme: dark) {
+  body[a="auto"] {
+    background: $bg-dark;
+    color: $text-dark;
+
+    h1, h2, h3, h4, h5, h6 { color: $text-dark; }
+    a { color: $link-dark; }
+    nav { border-color: lighten($bg-dark, 15%); color: $muted-dark; a { color: $link-dark; } }
+    header h1 a { color: $text-dark; &:hover { color: $link-dark; } }
+    header p { color: $muted-dark; }
+    blockquote { border-color: $muted-dark; color: $muted-dark; }
+    code { background: lighten($bg-dark, 8%); }
+    hr { border-color: lighten($bg-dark, 15%); }
+    th, td { border-color: lighten($bg-dark, 20%); }
+    .post-meta { color: $muted-dark; }
+    ::selection { background: $link-dark; color: $bg-dark; }
+  }
+}
