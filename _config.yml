@@ -23,6 +23,9 @@ description: "quid rides? mutato nomine de te fabula narratur."
 baseurl: ""
 url: "https://uslamlamak.com"
 
+# Analytics
+goat_counter: mbas6
+
 # Build settings
 plugins:
   - jekyll-feed
