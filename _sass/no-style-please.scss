@@ -6,7 +6,11 @@ $text: #2a2520;         // koyu kahve (toprak)
 $link: #a63520;         // koyu kırmızı (süvariler)
 $muted: #6a7a8a;        // gri-mavi
 
-html, body {
+html {
+  background: $bg;
+}
+
+body {
   background: $bg;
   margin: 0;
 }
