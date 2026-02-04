@@ -1,39 +1,34 @@
-<script>
-(function() {
-  const saved = localStorage.getItem('theme');
-  if (saved === 'dark') {
-    document.body.dataset.theme = 'dark';
-    document.documentElement.style.background = '#1a1814';
-  }
-})();
-</script>
 <button id="theme-toggle" type="button" aria-label="Tema değiştir"></button>
 <script>
 (function() {
   const toggle = document.getElementById('theme-toggle');
   const body = document.body;
   const html = document.documentElement;
-  const bgLight = '#f0e6d8';
-  const bgDark = '#1a1814';
 
-  function updateToggle() {
+  // Renkler SCSS ile senkronize tutulmalı (_sass/no-style-please.scss)
+  const colors = {
+    light: '#f0e6d8',
+    dark: '#1a1814'
+  };
+
+  function update() {
     const isDark = body.dataset.theme === 'dark';
-    html.style.background = isDark ? bgDark : bgLight;
+    html.style.background = colors[isDark ? 'dark' : 'light'];
     toggle.textContent = isDark ? 'light mode' : 'dark mode';
   }
 
-  updateToggle();
+  // Sayfa yüklenirken localStorage'dan tema al
+  const saved = localStorage.getItem('theme');
+  if (saved === 'dark') {
+    body.dataset.theme = 'dark';
+  }
+  update();
 
   toggle.addEventListener('click', function() {
     const isDark = body.dataset.theme === 'dark';
-    if (isDark) {
-      body.dataset.theme = 'light';
-      localStorage.removeItem('theme');
-    } else {
-      body.dataset.theme = 'dark';
-      localStorage.setItem('theme', 'dark');
-    }
-    updateToggle();
+    body.dataset.theme = isDark ? 'light' : 'dark';
+    isDark ? localStorage.removeItem('theme') : localStorage.setItem('theme', 'dark');
+    update();
   });
 })();
 </script>
