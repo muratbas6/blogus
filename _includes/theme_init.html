@@ -1,0 +1,11 @@
+<script>
+(function() {
+  var saved = localStorage.getItem('theme');
+  if (saved === 'dark') {
+    document.documentElement.style.background = '#1a1814';
+    document.addEventListener('DOMContentLoaded', function() {
+      document.body.dataset.theme = 'dark';
+    });
+  }
+})();
+</script>

@@ -1,19 +1,7 @@
 ---
 layout: default
 ---
-<img src="{{ "/banner.jpg" | relative_url }}" alt="Kırmızı Süvariler - Kazimir Maleviç" style="max-width:400px; width:100%; margin-bottom:1em; display:block; margin-left:auto; margin-right:auto;">
-
-<header>
-  <h1>{{ site.title }}</h1>
-  {%-if site.theme_config.show_description-%}
-    <p>{{ site.description }}</p>
-  {%-endif-%}
-</header>
-
-<nav>
-{%-for item in site.data.menu.entries-%}
-  <a href="{{ item.url | relative_url }}">{{ item.title }}</a> | {% endfor %}{%- include theme_toggle.html -%}
-</nav>
+{%- include site_header.html -%}
 
 <ul>
 {%- for post in site.posts -%}
