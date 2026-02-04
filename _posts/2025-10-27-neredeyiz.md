@@ -1,7 +1,6 @@
 ---
 layout: post
-title: "Neredeyiz?"
-author: "Giorgio Agamben"
+title: "Neredeyiz? - Giorgio Agamben"
 date: 2025-10-27
 lang: tr
 tags: [çeviri, agamben, felsefe]
