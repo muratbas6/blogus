@@ -1,11 +1,10 @@
 // Maleviç - Kırmızı Süvariler paleti
-// Renk Yönetimi: SCSS ana kaynak, _config.yml sadece bg renklerini JS için tutar
-// Değişiklik: 1) Burayı güncelle 2) bg değiştiyse _config.yml'ı da güncelle
+// Tüm renkler burada tanımlı (tek kaynak)
 
 @use "sass:color";
 
-// Light tema
-$bg: #f0e6d8;           // _config.yml: bg_light (senkron tut!)
+// Light tema (default - data-theme attribute yokken)
+$bg: #f0e6d8;
 $text: #2a2520;
 $link: #a63520;
 $muted: #6a7a8a;
@@ -167,8 +166,7 @@ header {
   color: $bg;
 }
 
-// Dark tema
-// bg-dark: _config.yml: bg_dark (senkron tut!)
+// Dark tema (data-theme="dark" olduğunda)
 $bg-dark: #1a1814;
 $text-dark: #e0d8cc;
 $link-dark: #d4654a;
