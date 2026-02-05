@@ -5,7 +5,8 @@
 
   {%- include theme_init.html -%}
 
-  {% seo %}
+  {% seo title=false %}
+  <title>{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}</title>
 
   <link rel="preconnect" href="https://cdn.jsdelivr.net">
   <link rel="icon" type="image/x-icon" href="{{ "/favicon.ico" | relative_url }}">
