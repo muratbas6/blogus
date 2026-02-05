@@ -23,6 +23,13 @@ description: "quid rides? mutato nomine de te fabula narratur."
 baseurl: ""
 url: "https://uslamlamak.com"
 
+# Default Open Graph image
+defaults:
+  - scope:
+      path: ""
+    values:
+      image: /banner.jpg
+
 # Analytics
 goat_counter: mbas6
 
