@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<html lang="{{ page.lang | default: "tr" }}">
+<html lang="{{ page.lang | default: "tr" }}" data-theme="{{ site.theme_config.appearance | default: 'light' }}">
   {%- include head.html -%}
-  <body data-theme="{{ site.theme_config.appearance | default: "light" }}">
+  <body>
     <main class="page-content" aria-label="Content">
       <div class="w">
         {{ content }}

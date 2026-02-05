@@ -1,25 +1,24 @@
 <button id="theme-toggle" type="button" aria-label="Tema değiştir"></button>
 <script>
 (function() {
-  const toggle = document.getElementById('theme-toggle');
-  const body = document.body;
-  const html = document.documentElement;
-  const colors = {
+  var toggle = document.getElementById('theme-toggle');
+  var html = document.documentElement;
+  var colors = {
     light: '{{ site.theme_config.colors.bg_light }}',
     dark: '{{ site.theme_config.colors.bg_dark }}'
   };
 
   function update() {
-    const isDark = body.dataset.theme === 'dark';
+    var isDark = html.dataset.theme === 'dark';
     html.style.background = colors[isDark ? 'dark' : 'light'];
-    toggle.textContent = isDark ? 'light mode' : 'dark mode';
+    toggle.textContent = isDark ? '☀' : '☾';
   }
 
   update();
 
   toggle.addEventListener('click', function() {
-    const isDark = body.dataset.theme === 'dark';
-    body.dataset.theme = isDark ? 'light' : 'dark';
+    var isDark = html.dataset.theme === 'dark';
+    html.dataset.theme = isDark ? 'light' : 'dark';
     isDark ? localStorage.removeItem('theme') : localStorage.setItem('theme', 'dark');
     update();
   });
