@@ -19,7 +19,8 @@
 # in the templates via {{ site.myvariable }}.
 
 title: uslamlamak
-description: "quid rides? mutato nomine de te fabula narratur."
+description: "Felsefe ve çeviri yazıları"
+motto: "quid rides? mutato nomine de te fabula narratur."
 baseurl: ""
 url: "https://uslamlamak.com"
 
