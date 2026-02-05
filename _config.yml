@@ -40,9 +40,7 @@ plugins:
   - jekyll-seo-tag
   - jekyll-sitemap
 
-# no-style-please theme settings
+# Theme settings
 theme_config:
-  show_description: true
-  show_menu: true
   back_home_text: "< anasayfa"
   date_format: "%d.%m.%Y"
