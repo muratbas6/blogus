@@ -1,6 +1,7 @@
 ---
 layout: post
-title: "Yapay Zekâ ve Doğal Aptallık Üzerine - Giorgio Agamben"
+title: "Yapay Zekâ ve Doğal Aptallık Üzerine"
+author: "Giorgio Agamben"
 date: 2025-10-31
 lang: tr
 tags: [çeviri, agamben, felsefe]

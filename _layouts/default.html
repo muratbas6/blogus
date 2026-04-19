@@ -2,8 +2,9 @@
 <html lang="{{ page.lang | default: "tr" }}">
   {%- include head.html -%}
   <body>
-    <main class="page-content" aria-label="Content">
-      <div class="w">
+    <div class="progress" id="progress"></div>
+    <main>
+      <div class="page">
         {{ content }}
       </div>
     </main>
@@ -11,5 +12,17 @@
     {%-if site.goat_counter-%}
       {%-include goat_counter.html-%}
     {%-endif-%}
+
+    <script>
+    (function(){
+      var prog = document.getElementById('progress');
+
+      window.addEventListener('scroll', function(){
+        var h = document.documentElement.scrollHeight - window.innerHeight;
+        var p = h > 0 ? Math.min(100, Math.max(0, window.scrollY / h * 100)) : 0;
+        if (prog) prog.style.width = p + '%';
+      }, { passive: true });
+    })();
+    </script>
   </body>
 </html>

@@ -1,6 +1,7 @@
 ---
 layout: post
-title: Depolitizasyon Üzerine - Asad Haider
+title: "Depolitizasyon Üzerine"
+author: "Asad Haider"
 lang: tr
 tags:
   - çeviri

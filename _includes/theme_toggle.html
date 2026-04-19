@@ -1,21 +1,25 @@
-<button id="theme-toggle" type="button" aria-label="Tema değiştir"></button>
+<button class="sw" id="theme-toggle" type="button" aria-label="Tema değiştir">
+  <span id="sw-light">gündüz</span>
+  <span class="sw-dot">·</span>
+  <span id="sw-dark">gece</span>
+</button>
 <script>
-(function() {
-  var toggle = document.getElementById('theme-toggle');
+(function(){
+  var btn = document.getElementById('theme-toggle');
   var html = document.documentElement;
+  var swLight = document.getElementById('sw-light');
+  var swDark  = document.getElementById('sw-dark');
 
-  function isDark() {
-    return html.dataset.theme === 'dark';
-  }
-
-  function update() {
-    toggle.textContent = isDark() ? 'light mode' : 'dark mode';
+  function update(){
+    var dark = html.dataset.theme === 'dark';
+    swLight.className = dark ? '' : 'on';
+    swDark.className  = dark ? 'on' : '';
   }
 
   update();
 
-  toggle.addEventListener('click', function() {
-    var newTheme = isDark() ? 'light' : 'dark';
+  btn.addEventListener('click', function(){
+    var newTheme = html.dataset.theme === 'dark' ? 'light' : 'dark';
     html.dataset.theme = newTheme;
     localStorage.setItem('theme', newTheme);
     update();

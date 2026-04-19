@@ -3,8 +3,11 @@ layout: default
 ---
 {%- include site_header.html -%}
 
-<ul>
+<div class="index">
 {%- for post in site.posts -%}
-  <li>{{ post.date | date: site.theme_config.date_format }} <a href="{{ post.url | relative_url }}">{{ post.title }}</a></li>
+  <a href="{{ post.url | relative_url }}" class="row">
+    <div class="date">{{ post.date | date: site.theme_config.date_format }}</div>
+    <div class="title">{{ post.title }}{% if post.author %}<em> — {{ post.author }}</em>{% endif %}</div>
+  </a>
 {%- endfor -%}
-</ul>
+</div>

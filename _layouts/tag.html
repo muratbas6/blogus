@@ -1,0 +1,19 @@
+---
+layout: default
+---
+{%- include site_header.html -%}
+
+<div class="back"><a href="{{ "/tags/" | relative_url }}">← tags</a></div>
+<h1 class="ptitle">{{ page.title }}</h1>
+{%- assign tag_posts = site.tags[page.title] -%}
+<div class="subt">{{ tag_posts.size }} yazı</div>
+
+<div class="index">
+{%- for post in tag_posts -%}
+  {%- assign delay_ms = forloop.index0 | times: 60 | plus: 50 -%}
+  <a href="{{ post.url | relative_url }}" class="row" style="animation-delay:{{ delay_ms }}ms">
+    <div class="date">{{ post.date | date: site.theme_config.date_format }}</div>
+    <div class="title">{{ post.title }}</div>
+  </a>
+{%- endfor -%}
+</div>

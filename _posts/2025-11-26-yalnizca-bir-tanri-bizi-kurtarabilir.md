@@ -1,6 +1,7 @@
 ---
 layout: post
-title: "Yalnızca Bir Tanrı Bizi Kurtarabilir - Giorgio Agamben"
+title: "Yalnızca Bir Tanrı Bizi Kurtarabilir"
+author: "Giorgio Agamben"
 date: 2025-11-26
 lang: tr
 tags: [çeviri, agamben, felsefe]

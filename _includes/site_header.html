@@ -1,13 +1,25 @@
+{%- if page.layout == 'home' -%}
+
 <img src="{{ "/banner.jpg" | relative_url }}" alt="Kırmızı Süvariler - Kazimir Maleviç" class="banner-img">
 
-<header>
-  <h1>{{ site.title }}</h1>
-  {%-if site.motto-%}
-    <p>{{ site.motto }}</p>
-  {%-endif-%}
-</header>
+<div class="masthead">
+  <h1><a href="{{ "/" | relative_url }}">{{ site.title }}</a></h1>
+  {%- if site.motto -%}
+  <div class="motto">{{ site.motto }}</div>
+  {%- endif -%}
+</div>
+
+{%- else -%}
+
+<div class="masthead masthead--compact">
+  <a href="{{ "/" | relative_url }}" class="site-link">{{ site.title }}</a>
+</div>
+
+{%- endif -%}
 
 <nav>
-{%-for item in site.data.menu.entries-%}
-  <a href="{{ item.url | relative_url }}">{{ item.title }}</a><span class="nav-sep" aria-hidden="true"> | </span>{% endfor %}{%- include theme_toggle.html -%}
+{%- for item in site.data.menu.entries -%}
+  <a href="{{ item.url | relative_url }}"{% if page.url == item.url %} class="on"{% endif %}>{{ item.title }}</a>
+{%- endfor -%}
+{%- include theme_toggle.html -%}
 </nav>

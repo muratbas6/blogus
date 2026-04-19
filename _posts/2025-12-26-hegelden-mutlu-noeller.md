@@ -1,6 +1,7 @@
 ---
 layout: post
-title: "Hegel'den Mutlu Noeller - Anne Carson"
+title: "Hegel'den Mutlu Noeller"
+author: "Anne Carson"
 date: 2025-12-26
 lang: tr
 tags: [çeviri, şiir, hegel]
