@@ -4,8 +4,9 @@
   <body>
     <div class="progress" id="progress"></div>
     <main>
-      <div class="page">
+      <div class="page{% if page.paragraphs %} page--wide{% endif %}">
         {{ content }}
+        {%- include site_footer.html -%}
       </div>
     </main>
 

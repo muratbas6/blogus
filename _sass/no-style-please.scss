@@ -24,10 +24,25 @@ html[data-theme="dark"] {
 
 * { box-sizing: border-box; }
 
+// Smooth dark-mode transition on every color-bearing element
+html, body, *, *::before, *::after {
+  transition:
+    background-color .55s var(--ease),
+    color            .55s var(--ease),
+    border-color     .55s var(--ease);
+}
+// Don't slow down hover/scroll animations
+.progress, nav a::after,
+.row::before, .tagrow::before { transition: none; }
+.row    { transition: padding-left .35s var(--ease); }
+.tagrow { transition: padding-left .35s var(--ease); }
+@media (prefers-reduced-motion: reduce) {
+  html, body, *, *::before, *::after { transition: none !important; }
+}
+
 html, body {
   background: var(--bg);
   margin: 0;
-  transition: background .5s var(--ease), color .5s var(--ease);
 }
 
 body {
@@ -87,6 +102,15 @@ nav .sw { margin-left: auto; }
   &:focus { outline: 2px solid var(--link); outline-offset: 2px; }
 }
 
+.nav-toggle {
+  display: none;
+  background: none; border: none; padding: 0; cursor: pointer; user-select: none;
+  font-family: var(--mono); font-size: 11px; letter-spacing: .18em; text-transform: uppercase;
+  color: var(--fg-muted);
+  &:hover { color: var(--fg); }
+  &:focus { outline: 2px solid var(--link); outline-offset: 2px; }
+}
+
 // masthead
 .masthead { margin: 40px 0 28px; }
 
@@ -126,8 +150,8 @@ nav {
 .index { display: flex; flex-direction: column; margin-top: 8px; }
 
 .row {
-  display: grid; grid-template-columns: 98px 1fr; gap: 24px; align-items: baseline;
-  padding: 22px 0; border-bottom: 1px solid var(--bg-rule);
+  display: grid; grid-template-columns: 88px 1fr; gap: 18px; align-items: baseline;
+  padding: 14px 0; border-bottom: 1px solid var(--bg-rule);
   position: relative;
   transition: padding-left .35s var(--ease);
   text-decoration: none; color: inherit;
@@ -141,7 +165,7 @@ nav {
     transition: color .25s var(--ease);
   }
   .title {
-    font-size: 20px; line-height: 1.4; transition: color .25s var(--ease);
+    font-size: 17px; line-height: 1.4; transition: color .25s var(--ease);
     em { color: var(--fg-muted); font-style: italic; }
   }
 
@@ -179,14 +203,6 @@ nav {
 .post {
   > p { margin: 18px 0; }
 
-  > p:first-child {
-    font-size: 22px; line-height: 1.55;
-    &::first-letter {
-      font-style: italic; font-size: 3.4em; line-height: .9;
-      float: left; padding: 4px 12px 0 0; color: var(--link);
-    }
-  }
-
   blockquote {
     margin: 28px 0; padding: 0 0 0 20px; border-left: 2px solid var(--link);
     font-style: italic; color: var(--fg-muted);
@@ -203,6 +219,40 @@ nav {
     background: var(--bg-soft); padding: .1rem .3rem; border-radius: 3px;
   }
   pre code { display: block; padding: 1rem; overflow-x: auto; border-radius: 4px; }
+}
+
+// yazılar arası gezinme
+.post-nav {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 24px;
+  margin: 56px 0 0; padding: 22px 0 0;
+  border-bottom: none;
+  border-top: 1px solid var(--bg-rule);
+  font-family: var(--serif); font-size: inherit;
+  letter-spacing: normal; text-transform: none;
+
+  &__cell { min-width: 0; }
+  &__prev { text-align: left; }
+  &__next { text-align: right; grid-column: 2; }
+
+  a {
+    display: block; color: inherit; text-decoration: none;
+    padding: 0; transition: color .25s var(--ease);
+    &::after { display: none; }
+    &:hover { text-decoration: none; }
+    &:hover .post-nav__title { color: var(--link); }
+  }
+
+  &__label {
+    display: block;
+    font-family: var(--mono); font-size: 11px; letter-spacing: .14em;
+    text-transform: uppercase; color: var(--fg-muted); margin-bottom: 6px;
+  }
+  &__title {
+    display: block;
+    font-style: italic; font-size: 17px; line-height: 1.35;
+    color: var(--fg);
+    transition: color .25s var(--ease);
+  }
 }
 
 // page titles
@@ -259,10 +309,24 @@ nav {
   b { color: var(--fg); font-weight: 400; }
 }
 
+// site footer (colophon)
+.site-footer {
+  margin-top: 80px; padding: 18px 0 0;
+  border-top: 1px solid var(--bg-rule);
+  display: flex; flex-wrap: wrap; gap: 8px 12px;
+  font-family: var(--mono); font-size: 11px; letter-spacing: .12em;
+  text-transform: uppercase; color: var(--fg-muted);
+  span[aria-hidden] { color: var(--bg-rule); }
+}
+@media (max-width: 600px) {
+  .site-footer { margin-top: 56px; gap: 6px 10px; font-size: 10px; }
+}
+
 // banner
 .banner-img {
-  max-width: 100%; display: block;
-  max-height: 280px; width: 100%; object-fit: cover; object-position: center;
+  display: block;
+  width: 70%; max-width: 460px; height: auto;
+  margin: 0 auto;
 }
 
 
@@ -275,10 +339,124 @@ table {
   th, td { padding: .4rem .6rem; border: 1px solid var(--bg-rule); }
 }
 
+// Wide page wrapper for annotated posts
+.page--wide { max-width: 1060px; }
+
+// Annotated post layout — 3-column sidenote grid
+.post--annotated {
+  display: grid;
+  grid-template-columns: 220px 480px 220px;
+  column-gap: 40px;
+  align-items: start;
+  margin: 8px auto 0;
+  max-width: 1000px;
+
+  .para {
+    grid-column: 2;
+    margin: 18px 0;
+
+
+    sup {
+      color: var(--link);
+      font-size: .7em; vertical-align: super;
+      padding: 0 .12em; font-family: var(--mono); margin-left: 2px;
+    }
+  }
+}
+
+.sn-cell {
+  padding-top: 22px;
+  font-family: var(--serif); font-size: 14px; line-height: 1.55;
+  color: var(--fg-muted); font-style: italic;
+  display: flex; flex-direction: column; gap: 1rem;
+}
+
+.sn-left  { grid-column: 1; text-align: right; }
+.sn-right { grid-column: 3; text-align: left; }
+
+
+.sn-mark {
+  color: var(--link); font-style: normal;
+  font-family: var(--mono); font-size: 11px;
+  letter-spacing: .1em; margin-right: .35em;
+  a { color: inherit; &:hover { text-decoration: none; } }
+}
+
+.post--annotated sup a {
+  color: var(--link);
+  &:hover { text-decoration: none; }
+}
+
+@media (max-width: 900px) {
+  .post--annotated {
+    grid-template-columns: 1fr;
+    max-width: 680px;
+  }
+  .post--annotated .para { order: 1; grid-column: 1; }
+  .sn-cell { order: 2; grid-column: 1; text-align: left; padding-top: 0; }
+  .sn-left:empty, .sn-right:empty { display: none; }
+  // Tüm notları metnin altında grupla, ince çizgiyle ayır
+  .sn-cell:not(:empty) { margin-top: 0.5rem; }
+  .sn-cell:not(:empty):first-of-type {
+    margin-top: 2rem; padding-top: 1.5rem;
+    border-top: 1px solid var(--bg-rule);
+  }
+}
+
 // responsive
 @media (max-width: 600px) {
-  .page { padding: 40px 22px 80px; }
-  .row { grid-template-columns: 78px 1fr; gap: 14px; }
-  nav { gap: 18px; }
-  .masthead { margin: 48px 0 28px; }
+  // sayfa kenar boşlukları
+  .page { padding: 20px 18px 60px; }
+
+  // nav: hamburger + toggle satırı, linkler açılınca alta
+  nav {
+    gap: 16px; row-gap: 0;
+    padding: 10px 0 14px; margin-bottom: 18px;
+  }
+  .nav-toggle { display: inline-flex; order: 1; }
+  nav > a { display: none; order: 3; width: 100%; padding: 14px 0; border-bottom: 1px solid var(--bg-rule); font-size: 12px; &::after { display: none; } }
+  nav.nav--open > a { display: block; }
+  nav .sw { order: 2; width: auto; margin-left: auto; margin-bottom: 0; }
+
+  // masthead
+  .masthead { margin: 24px 0 18px; }
+  .masthead--compact { margin: 0; }
+
+  // post listesi: mobilde dikey kompakt — tarih küçük etiket, başlık altta
+  .row {
+    display: block;
+    padding: 12px 0;
+    &:hover { padding-left: 0; } // hover indent'i mobilde kapat
+    .date { display: block; font-size: 10px; margin-bottom: 4px; }
+    .title { font-size: 16px; line-height: 1.4; }
+    &::before { display: none; }
+  }
+  .tagrow {
+    padding: 14px 0;
+    &:hover { padding-left: 0; }
+    &::before { display: none; }
+  }
+
+  // yazı içeriği
+  body { font-size: 17px; }
+
+  // post başlığı
+  .post-head h1 { font-size: clamp(26px, 7vw, 38px); }
+  .post-head .meta { gap: 8px 12px; }
+
+  // post navigation: mobilde tek sütun
+  .post-nav {
+    grid-template-columns: 1fr; gap: 18px;
+    margin: 40px 0 0;
+    padding: 22px 0 0;
+    &__next { grid-column: 1; text-align: left; }
+    &__title { font-size: 15px; }
+  }
+
+  // sayfa başlıkları (tags, about)
+  .ptitle { font-size: clamp(30px, 8vw, 44px); }
+
+  // tags listesi
+  .tagrow .nm { font-size: 20px; }
+
 }

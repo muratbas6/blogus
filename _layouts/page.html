@@ -3,10 +3,6 @@ layout: default
 ---
 {%- include site_header.html -%}
 
-{%- if page.url != '/about/' -%}
-<div class="back"><a href="{{ "/" | relative_url }}">{{ site.theme_config.back_home_text }}</a></div>
-{%- endif -%}
-
 <h1 class="ptitle">{{ page.title }}</h1>
 
 <div class="page-body">

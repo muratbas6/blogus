@@ -10,10 +10,9 @@ layout: default
 
 <div class="index">
 {%- for post in tag_posts -%}
-  {%- assign delay_ms = forloop.index0 | times: 60 | plus: 50 -%}
-  <a href="{{ post.url | relative_url }}" class="row" style="animation-delay:{{ delay_ms }}ms">
+  <a href="{{ post.url | relative_url }}" class="row">
     <div class="date">{{ post.date | date: site.theme_config.date_format }}</div>
-    <div class="title">{{ post.title }}</div>
+    <div class="title">{{ post.title }}{% if post.author %}<em> — {{ post.author }}</em>{% endif %}</div>
   </a>
 {%- endfor -%}
 </div>

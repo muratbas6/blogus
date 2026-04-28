@@ -42,5 +42,5 @@ plugins:
 
 # Theme settings
 theme_config:
-  back_home_text: "< anasayfa"
+  back_home_text: "← anasayfa"
   date_format: "%d.%m.%Y"

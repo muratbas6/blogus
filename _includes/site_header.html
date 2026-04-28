@@ -17,9 +17,29 @@
 
 {%- endif -%}
 
-<nav>
+<nav id="site-nav">
+<button class="nav-toggle" id="nav-toggle" type="button" aria-label="Menüyü aç" aria-expanded="false">menü</button>
 {%- for item in site.data.menu.entries -%}
   <a href="{{ item.url | relative_url }}"{% if page.url == item.url %} class="on"{% endif %}>{{ item.title }}</a>
 {%- endfor -%}
 {%- include theme_toggle.html -%}
 </nav>
+<script>
+(function(){
+  var btn = document.getElementById('nav-toggle');
+  var nav = document.getElementById('site-nav');
+  if (!btn || !nav) return;
+  function setOpen(open){
+    nav.classList.toggle('nav--open', open);
+    btn.textContent = open ? 'kapat' : 'menü';
+    btn.setAttribute('aria-expanded', String(open));
+  }
+  btn.addEventListener('click', function(){
+    setOpen(!nav.classList.contains('nav--open'));
+  });
+  // Link'e tıklayınca menüyü kapat
+  nav.querySelectorAll('a').forEach(function(a){
+    a.addEventListener('click', function(){ setOpen(false); });
+  });
+})();
+</script>
