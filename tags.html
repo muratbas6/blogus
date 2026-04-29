@@ -2,18 +2,13 @@
 layout: default
 permalink: /tags/
 ---
-{%- include site_header.html -%}
+<a href="{{ "/" | relative_url }}">{{ site.theme_config.back_home_text }}</a>
 
-<h1 class="ptitle">tags</h1>
-<div class="subt">{{ site.tags.size }} etiket</div>
+<h1>tags</h1>
 
-<div class="tagwrap">
+<ul>
 {%- assign sorted_tags = site.tags | sort -%}
 {%- for tag in sorted_tags -%}
-  {%- assign delay_ms = forloop.index0 | times: 70 | plus: 50 -%}
-  <a href="{{ "/tags/" | relative_url }}{{ tag[0] }}/" class="tagrow" style="animation-delay:{{ delay_ms }}ms">
-    <span class="nm">{{ tag[0] }}</span>
-    <span class="ct">{{ tag[1].size | prepend: "00" | slice: -2, 2 }}</span>
-  </a>
+  <li><a href="{{ "/tags/" | relative_url }}{{ tag[0] }}/">{{ tag[0] }}</a> ({{ tag[1].size }})</li>
 {%- endfor -%}
-</div>
+</ul>

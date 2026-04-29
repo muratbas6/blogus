@@ -1,13 +1,9 @@
 ---
 layout: default
 ---
-{%- include site_header.html -%}
+<img src="{{ "/banner.jpg" | relative_url }}" alt="Kırmızı Süvariler - Kazimir Maleviç" class="banner">
 
-<div class="index">
-{%- for post in site.posts -%}
-  <a href="{{ post.url | relative_url }}" class="row">
-    <div class="date">{{ post.date | date: site.theme_config.date_format }}</div>
-    <div class="title">{{ post.title }}{% if post.author %}<em> — {{ post.author }}</em>{% endif %}</div>
-  </a>
-{%- endfor -%}
-</div>
+<h1>{{ site.title }}</h1>
+<p>{{ site.motto }}</p>
+
+{%- include menu_item.html collection=site.data.menu.entries -%}

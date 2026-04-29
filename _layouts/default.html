@@ -2,28 +2,18 @@
 <html lang="{{ page.lang | default: "tr" }}">
   {%- include head.html -%}
   <body>
-    <div class="progress" id="progress"></div>
-    <main>
-      <div class="page{% if page.paragraphs %} page--wide{% endif %}">
+    <main class="page-content" aria-label="Content">
+      <div class="w{% if page.paragraphs %} page--wide{% endif %}">
         {{ content }}
-        {%- include site_footer.html -%}
+        <p class="site-footer">
+          {%- unless page.layout == 'post' -%}
+            {%- include theme_toggle.html -%}
+          {%- endunless -%}
+        </p>
       </div>
     </main>
-
     {%-if site.goat_counter-%}
       {%-include goat_counter.html-%}
     {%-endif-%}
-
-    <script>
-    (function(){
-      var prog = document.getElementById('progress');
-
-      window.addEventListener('scroll', function(){
-        var h = document.documentElement.scrollHeight - window.innerHeight;
-        var p = h > 0 ? Math.min(100, Math.max(0, window.scrollY / h * 100)) : 0;
-        if (prog) prog.style.width = p + '%';
-      }, { passive: true });
-    })();
-    </script>
   </body>
 </html>

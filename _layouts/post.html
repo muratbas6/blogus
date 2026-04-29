@@ -1,31 +1,23 @@
 ---
 layout: default
 ---
-{%- include site_header.html -%}
-
-<div class="back"><a href="{{ "/" | relative_url }}">{{ site.theme_config.back_home_text }}</a></div>
+<a href="{{ "/" | relative_url }}">{{ site.theme_config.back_home_text }}</a>
 
 <article>
-  <div class="post-head">
-    <h1>{{ page.title }}</h1>
-    <div class="meta">
-      <span><time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: site.theme_config.date_format }}</time></span>
-{%- if page.author -%}
-      <span class="au">{{ page.author }}</span>
-      {%- endif -%}
-      {%- if page.tags.size > 0 -%}
-      <span>{%- for tag in page.tags -%}<a href="{{ "/tags/" | relative_url }}{{ tag }}/">{{ tag }}</a>{% unless forloop.last %} · {% endunless %}{%- endfor -%}</span>
-      {%- endif -%}
-    </div>
-  </div>
+  <p class="post-meta">
+    <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: site.theme_config.date_format }}</time>{% if page.author %} · {{ page.author }}{% endif %}{%- for tag in page.tags %} · <a href="{{ "/tags/" | relative_url }}{{ tag }}/">{{ tag }}</a>{% endfor %} · {% include theme_toggle.html %}
+  </p>
+
+  <h1>{{ page.title }}</h1>
+
   {%- if page.paragraphs -%}
-  <div class="post post--annotated">
+  <div class="post--annotated">
     {%- for para in page.paragraphs -%}
       {%- assign side = forloop.index0 | modulo: 2 -%}
       <div class="sn-cell sn-left">
         {%- if side == 1 and para.notes.size > 0 -%}
           {%- for n in para.notes -%}
-            <div id="sn-{{ n.mark }}" class="sn-item"><span class="sn-mark"><a href="#ref-{{ n.mark }}">[{{ n.mark }}]</a></span> {{ n.text }}</div>
+            <div id="sn-{{ n.mark }}"><span class="sn-mark"><a href="#ref-{{ n.mark }}">[{{ n.mark }}]</a></span> {{ n.text }}</div>
           {%- endfor -%}
         {%- endif -%}
       </div>
@@ -33,52 +25,33 @@ layout: default
       <div class="sn-cell sn-right">
         {%- if side == 0 and para.notes.size > 0 -%}
           {%- for n in para.notes -%}
-            <div id="sn-{{ n.mark }}" class="sn-item"><span class="sn-mark"><a href="#ref-{{ n.mark }}">[{{ n.mark }}]</a></span> {{ n.text }}</div>
+            <div id="sn-{{ n.mark }}"><span class="sn-mark"><a href="#ref-{{ n.mark }}">[{{ n.mark }}]</a></span> {{ n.text }}</div>
           {%- endfor -%}
         {%- endif -%}
       </div>
     {%- endfor -%}
   </div>
   {%- else -%}
-  <div class="post">
-    {{ content }}
-  </div>
+  {{ content }}
   {%- endif -%}
 
   {%- if page.previous.url or page.next.url -%}
-  <nav class="post-nav" aria-label="Yazılar arası gezinme">
-    <div class="post-nav__cell post-nav__prev">
-      {%- if page.previous.url -%}
-        <a href="{{ page.previous.url | relative_url }}">
-          <span class="post-nav__label">← önceki</span>
-          <span class="post-nav__title">{{ page.previous.title }}</span>
-        </a>
-      {%- endif -%}
-    </div>
-    <div class="post-nav__cell post-nav__next">
-      {%- if page.next.url -%}
-        <a href="{{ page.next.url | relative_url }}">
-          <span class="post-nav__label">sonraki →</span>
-          <span class="post-nav__title">{{ page.next.title }}</span>
-        </a>
-      {%- endif -%}
-    </div>
+  <hr>
+  <nav class="post-nav">
+    {%- if page.previous.url -%}
+    <a class="post-nav-item post-nav-newer" href="{{ page.previous.url | relative_url }}">
+      <span class="post-nav-label">← daha yeni</span>
+      {{ page.previous.title }}
+    </a>
+    {%- else -%}
+    <span></span>
+    {%- endif -%}
+    {%- if page.next.url -%}
+    <a class="post-nav-item post-nav-older" href="{{ page.next.url | relative_url }}">
+      <span class="post-nav-label">daha eski →</span>
+      {{ page.next.title }}
+    </a>
+    {%- endif -%}
   </nav>
   {%- endif -%}
 </article>
-
-{%- if page.paragraphs -%}
-<script>
-(function(){
-  // Anchor links for sidenotes use scrollIntoView (respects CSS order)
-  document.querySelectorAll('sup a[href^="#sn-"], .sn-mark a[href^="#ref-"]').forEach(function(a){
-    a.addEventListener('click', function(e){
-      e.preventDefault();
-      var id = a.getAttribute('href').slice(1);
-      var target = document.getElementById(id);
-      if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    });
-  });
-})();
-</script>
-{%- endif -%}

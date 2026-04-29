@@ -34,6 +34,8 @@ defaults:
 # Analytics
 goat_counter: mbas6
 
+theme: no-style-please
+
 # Build settings
 plugins:
   - jekyll-feed
@@ -44,3 +46,5 @@ plugins:
 theme_config:
   back_home_text: "← anasayfa"
   date_format: "%d.%m.%Y"
+  show_description: false
+  appearance: auto
