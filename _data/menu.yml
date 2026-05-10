@@ -2,6 +2,6 @@ entries:
   - title: tags
     url: /tags/
 
-  - title: yazılar
+  - title: çeviriler
     url: false
     post_list: true
