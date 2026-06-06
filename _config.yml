@@ -23,6 +23,7 @@ description: "Felsefe ve çeviri yazıları"
 motto: "quid rides? mutato nomine de te fabula narratur."
 baseurl: ""
 url: "https://uslamlamak.com"
+timezone: Europe/Istanbul
 
 # Default Open Graph image
 defaults:
