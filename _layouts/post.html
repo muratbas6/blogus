@@ -10,30 +10,7 @@ layout: default
 
   <h1>{{ page.title }}</h1>
 
-  {%- if page.paragraphs -%}
-  <div class="post--annotated">
-    {%- for para in page.paragraphs -%}
-      {%- assign side = forloop.index0 | modulo: 2 -%}
-      <div class="sn-cell sn-left">
-        {%- if side == 1 and para.notes.size > 0 -%}
-          {%- for n in para.notes -%}
-            <div id="sn-{{ n.mark }}"><span class="sn-mark"><a href="#ref-{{ n.mark }}">[{{ n.mark }}]</a></span> {{ n.text }}</div>
-          {%- endfor -%}
-        {%- endif -%}
-      </div>
-      <p class="para">{{ para.text }}{%- if para.notes.size > 0 -%}<sup>{%- for n in para.notes -%}{% unless forloop.first %} {% endunless %}<a id="ref-{{ n.mark }}" href="#sn-{{ n.mark }}">[{{ n.mark }}]</a>{%- endfor -%}</sup>{%- endif -%}</p>
-      <div class="sn-cell sn-right">
-        {%- if side == 0 and para.notes.size > 0 -%}
-          {%- for n in para.notes -%}
-            <div id="sn-{{ n.mark }}"><span class="sn-mark"><a href="#ref-{{ n.mark }}">[{{ n.mark }}]</a></span> {{ n.text }}</div>
-          {%- endfor -%}
-        {%- endif -%}
-      </div>
-    {%- endfor -%}
-  </div>
-  {%- else -%}
   {{ content }}
-  {%- endif -%}
 
   {%- if page.previous.url or page.next.url -%}
   <hr>
