@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Hüviyyet Üzerine — Giorgio Agamben
+title: Hüviyyet Üzerine
 author: Giorgio Agamben
 date: 2026-06-07
 lang: tr
