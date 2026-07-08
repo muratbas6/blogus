@@ -9,6 +9,7 @@ tags:
   - clover
   - komünizm
   - felsefe
+image: /assets/images/010-exhibition.jpg
 permalink: /2026/07/08/komunist-gercekcilik/
 ---
 
