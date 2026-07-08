@@ -79,6 +79,19 @@ table, th, td { border: 1px solid var(--fg-muted); padding: 0.4rem; }
 
 ul, ol { padding-left: 1.5rem; }
 
+.footnotes {
+  margin-top: 3rem;
+  font-size: 0.8em;
+  color: var(--fg-muted);
+  &::before {
+    content: "";
+    display: block;
+    width: 6rem;
+    border-top: 1px solid var(--fg-muted);
+    margin-bottom: 1rem;
+  }
+}
+
 .sw {
   display: inline-flex; gap: 4px; cursor: pointer; user-select: none;
   background: none; border: none; padding: 0;
