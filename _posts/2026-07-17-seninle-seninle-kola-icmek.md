@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 'Seninle "Seninle Kola İçmek" - Mark Leidner'
+title: 'Seninle "Seninle Kola İçmek"'
 author: Mark Leidner
 date: 2026-07-17
 lang: tr
