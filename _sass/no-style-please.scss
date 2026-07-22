@@ -110,10 +110,22 @@ sup {
   padding-left: 0;
 }
 
+.posts li {
+  display: flex;
+  align-items: baseline;
+  gap: 0.8rem;
+  margin-bottom: 0.4rem;
+}
+
 .posts li span {
   color: var(--fg-muted);
-  font-size: 0.75em;
-  margin-right: 0.5em;
+  font-size: 0.8em;
+  flex-shrink: 0;
+  white-space: nowrap;
+}
+
+.posts li a {
+  flex-grow: 1;
 }
 
 .site-footer {
