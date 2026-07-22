@@ -53,7 +53,14 @@ li { margin: 0.4rem 0; }
   padding: 4rem 2rem;
 }
 
-.post-meta { color: var(--fg-muted); font-size: 0.85em; }
+.post-meta {
+  color: var(--fg-muted);
+  font-size: 0.85em;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.3em 0.5em;
+}
 .post-meta .sw { font-size: 1em; }
 
 blockquote {
@@ -172,4 +179,5 @@ sup {
 @media (max-width: 600px) {
   .w { padding: 2rem 1.2rem; }
   body { font-size: 16px; }
+  .banner { width: 90%; max-width: 100%; }
 }

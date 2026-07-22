@@ -7,8 +7,9 @@
         {{ content }}
         <p class="site-footer">
           {%- unless page.layout == 'post' -%}
-            {%- include theme_toggle.html -%}
+            {%- include theme_toggle.html -%} · 
           {%- endunless -%}
+          <a href="{{ "/feed.xml" | relative_url }}">rss</a>
         </p>
       </div>
     </main>
