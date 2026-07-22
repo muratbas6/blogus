@@ -7,6 +7,7 @@ lang: tr
 tags:
   - şiir
   - çeviri
+image: /assets/images/the-long-leg.jpg
 ---
 
 Konan uğurböceği  
