@@ -2,6 +2,10 @@ entries:
   - title: tags
     url: /tags/
 
+  - title: okuma listesi
+    url: /kitaplar/
+
   - title: çeviriler
     url: false
     post_list: true
+

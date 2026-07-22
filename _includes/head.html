@@ -7,10 +7,21 @@
 
   {% seo title=false %}
   <title>{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}</title>
-  <meta property="og:description" content="{{ site.motto }}" />
+  
+  {% assign og_desc = page.excerpt | default: page.description | default: site.motto | strip_html | strip_newlines | truncate: 160 %}
+  {% assign og_img = page.image | default: site.defaults[0].values.image | relative_url %}
+  <meta property="og:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}" />
+  <meta property="og:description" content="{{ og_desc }}" />
+  <meta property="og:image" content="{{ og_img | absolute_url }}" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}" />
+  <meta name="twitter:description" content="{{ og_desc }}" />
+  <meta name="twitter:image" content="{{ og_img | absolute_url }}" />
 
   <link rel="preconnect" href="https://cdn.jsdelivr.net">
   <link rel="icon" type="image/x-icon" href="{{ "/favicon.ico" | relative_url }}">
   <link rel="stylesheet" href="{{ "/assets/css/main.css" | relative_url }}">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.css" integrity="sha384-OH8qNTHoMMVNVcKdKewlipV4SErXqccxxlg6HC9Cwjr5oZu2AdBej1TndeCirael" crossorigin="anonymous">
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js" integrity="sha384-XjKyOOlGwcjNTAIQHIpgOno0Hl1YQqzUOEleOLALmuqehneUG+vnGctmUb0ZY0l8" crossorigin="anonymous"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js" integrity="sha384-+VBxd3r6XgURycqtZ117nYwIZOHcfLX2ZF69uuZoVmk0N056r1GiJRMGvq+654g" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
 </head>

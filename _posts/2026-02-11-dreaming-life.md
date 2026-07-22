@@ -1,10 +1,11 @@
 ---
 layout: post
 title: "Dreaming Life"
+author: "Giorgio Agamben"
 date: 2026-02-11
 lang: tr
 published: false
-tags: [felsefe, çeviri]
+tags: [çeviri, agamben, felsefe]
 ---
 
 Her zamanki sinematik hızda bir film oynatılıyor önümde, saniyede yirmi dört kare. Ancak tek tek kareleri görmüyorum: gözlerimin önünde sahneler serilirken kesintisiz bir akış görüyorum. Bu deneyimi bir yanılsama olarak düşünmek ve onun gerçekten ne olduğunu ortaya çıkarmak için kare hızını yavaşlatmanın yeterli olduğuna inanmak doğaldır. Saniyede on karede hızındayken akış kaybolacak ve kesintili bir seriye indirgenecektir; saniyede üçteyken, sadece tek tek kareleri göreceğim. Öyleyse, en başından beri bunun bir akış olmadığı sonucuna varılabilir: Öyle olduğunu düşündüysem yanılıyormuşum.

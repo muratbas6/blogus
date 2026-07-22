@@ -3,3 +3,11 @@ _site
 .jekyll-cache
 .jekyll-metadata
 vendor
+.DS_Store
+*.DS_Store
+.obsidian
+.claude
+_posts/uslamlamakposts
+_drafts
+
+

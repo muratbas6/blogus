@@ -2,10 +2,9 @@
 layout: post
 title: "Depolitizasyon Üzerine"
 author: "Asad Haider"
+date: 2026-02-06
 lang: tr
-tags:
-  - çeviri
-  - siyaset
+tags: [çeviri, siyaset]
 image: /assets/images/depolitizasyon.jpg
 ---
 

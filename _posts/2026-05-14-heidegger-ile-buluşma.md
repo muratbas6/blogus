@@ -4,7 +4,7 @@ title: "Heidegger'le Buluşma"
 author: "Reiner Schürmann"
 date: 2026-05-14
 lang: tr
-tags: [çeviri, schürmann ,heidegger]
+tags: [çeviri, schürmann, heidegger]
 image: /assets/images/schurmann.jpg
 permalink: /2026/05/14/heidegger-ile-bulusma/
 ---

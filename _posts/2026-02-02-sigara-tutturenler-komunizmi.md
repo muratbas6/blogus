@@ -3,8 +3,8 @@ layout: post
 title: "Tüttürenlerin Komünizmi"
 author: "Mladen Dolar"
 date: 2026-02-02
-tags:
-  - felsefe
+lang: tr
+tags: [çeviri, felsefe, komünizm]
 ---
 
 *Dominique ve Oxana'ya*

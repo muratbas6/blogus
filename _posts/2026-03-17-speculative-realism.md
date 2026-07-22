@@ -5,7 +5,7 @@ author: "stellar cartographies"
 date: 2026-03-17
 lang: tr
 published: false
-tags: []
+tags: [çeviri, felsefe]
 ---
 
 "Bütün bilim ya fiziktir ya da pul koleksiyonculuğu."  
