@@ -36,7 +36,7 @@ a { color: var(--link); }
 
 h1, h2, h3, h4, h5, h6 { font-weight: normal; }
 h1 {
-  font-size: clamp(1.1rem, 2.2vw, 1.35rem);
+  font-size: clamp(1.25rem, 3.2vw, 1.6rem);
   line-height: 1.35;
 }
 h2, h3, h4, h5, h6 { margin-top: 3rem; }
@@ -48,7 +48,7 @@ li { margin: 0.4rem 0; }
 ::selection { background: var(--link); color: var(--bg); }
 
 .w {
-  max-width: 800px;
+  max-width: 880px;
   margin: 0 auto;
   padding: 4rem 2rem;
 }
