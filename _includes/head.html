@@ -7,16 +7,6 @@
 
   {% seo title=false %}
   <title>{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}</title>
-  
-  {% assign og_desc = page.excerpt | default: page.description | default: site.motto | strip_html | strip_newlines | truncate: 160 %}
-  {% assign og_img = page.image | default: site.defaults[0].values.image | relative_url %}
-  <meta property="og:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}" />
-  <meta property="og:description" content="{{ og_desc }}" />
-  <meta property="og:image" content="{{ og_img | absolute_url }}" />
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}" />
-  <meta name="twitter:description" content="{{ og_desc }}" />
-  <meta name="twitter:image" content="{{ og_img | absolute_url }}" />
 
   <link rel="preconnect" href="https://cdn.jsdelivr.net">
   <link rel="icon" type="image/x-icon" href="{{ "/favicon.ico" | relative_url }}">
