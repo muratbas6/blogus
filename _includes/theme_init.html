@@ -1,8 +1,10 @@
 <script>
 (function() {
+  var html = document.documentElement;
+  if (html.hasAttribute('data-night')) return;
   var saved = localStorage.getItem('theme');
   if (saved) {
-    document.documentElement.dataset.theme = saved;
+    html.dataset.theme = saved;
   }
 })();
 </script>

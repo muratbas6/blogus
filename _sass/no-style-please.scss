@@ -14,6 +14,21 @@ html[data-theme="dark"] {
   --link: #d4654a;
 }
 
+.ayrac { text-align: center; }
+
+figure { margin: 2.5rem 0; }
+figcaption {
+  text-align: center;
+  font-weight: bold;
+  margin-top: 0.9rem;
+}
+
+// Tema seçimi kapalı, sabit gece sayfaları (frontmatter: dark: true)
+html[data-night] {
+  --bg: #000;
+  --bg-soft: #111;
+}
+
 html, body, *, *::before, *::after {
   transition: background-color .3s;
 }

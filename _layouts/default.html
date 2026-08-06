@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{ page.lang | default: "tr" }}">
+<html lang="{{ page.lang | default: "tr" }}"{% if page.dark %} data-theme="dark" data-night{% endif %}>
   {%- include head.html -%}
   <body>
     <main class="page-content" aria-label="Content">

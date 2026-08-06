@@ -5,7 +5,7 @@ layout: default
 
 <article>
   <p class="post-meta">
-    <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: site.theme_config.date_format }}</time>{% if page.author %} · {{ page.author }}{% endif %}{%- for tag in page.tags %} · <a href="{{ "/tags/" | relative_url }}{{ tag }}/">{{ tag }}</a>{% endfor %} · {% include theme_toggle.html %}
+    <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: site.theme_config.date_format }}</time>{% if page.author %} · {{ page.author }}{% endif %}{%- for tag in page.tags %} · <a href="{{ "/tags/" | relative_url }}{{ tag }}/">{{ tag }}</a>{% endfor %}{% unless page.dark %} · {% include theme_toggle.html %}{% endunless %}
   </p>
 
   <h1>{{ page.title }}{% if page.author %} — {{ page.author }}{% endif %}</h1>
