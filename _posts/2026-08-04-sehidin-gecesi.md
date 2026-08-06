@@ -33,7 +33,7 @@ Başta onu ormanlarda tahayyül ederiz Geceleyin-saklanırken, açlıktan yorgun
 Ağaçlarla örtülü bu uzun geceler belirli tarzda düşünceler için müsaittir.  
 &emsp;&emsp;Aşikar ayrılıkların düşünceleri (aileden, sevgililerden), olası zaferlerin ve kayıpların düşünceleri (kadercilik mücadelesi); ama sonra giderek daha tuhaf düşünceler, sürünüp dolaşan böceklerin ve hayvanların ortasında insan tecrübesinin beyhudeliği. Elleri, parmak boğumları, tırnakları başkalaşmış görünüyordur.  
 &emsp;&emsp;Gece'deki bu tefekkür yalnızlığı neredeyse-liserjik bir duyumsamadır.  
-&emsp;&emsp;Çünkü gece bağlıdır hayrete.
+&emsp;&emsp;Çünkü Gece bağlıdır hayrete.
 
 Yıllar sonra buluruz onu, esip geçerken şehirlerde Geceleyin-koşmaktadır, nefesi sağ omzuna asılı tüfek gibi ağırdır.  
 &emsp;&emsp;Uzundur çoğundan, ve siner tespit edilmemek için, ta ki kralın muhafızlarını ve askerleri düşürmek için yükselene kadar. Öldürür böylesi nadir gece-vesilelerinde, gerçi fotoğraf şiddetten keyif almayan gözlerini yakalamıştır. Devrimci intikamın haz-ilkesi yoktur, ve insan, zaruri cinayet edimlerinde bile onun nazik bir dokunuşa sahip olduğunu hayal eder.  
@@ -78,7 +78,7 @@ Koleksiyon Gecesi iğrenç yöntemlerin ortasında gerçekleşir, aristokrat bir
 
 İdeolojik rejimlerin zavallı güneşine karşı, şehidin bakışının Gecesi ilham verecektir bize.  
 &emsp;&emsp;Ne var ki ilham, deliliğe yakın bir şeydir, zayiçe ile gölge oyununun bir karışımı (kasten bilinmeyenin taktikleri). Psikanaliz, travmatik deneyime çok fazla nedensel önem verir, zira deliliği sadece psikopatik uçlarda düşünmeye dair erken önyargıdan hep muzdarip olmuştur. Fakat Gece'nin ortaya koyduğu şey, daha düşük dereceden imalara karşı belirli bir hassasiyet/duyarlılığın, daha incelikli mecnunî kudretlerin elde edilmesiyle sonuçlanabileceğidir: biraz paranoyak kabiliyet, biraz manik kabiliyet, biraz delüzyonel kabiliyet, biraz şizofrenik kabiliyet, biraz obsesif kabiliyet, biraz melankolik kabiliyet. Bunlar büyüleyici ve canlandırıcı özelliklerdir ki Gece, zihni başka yerlere götürmek için doğru minimalist tetikleyicileri ve düşük dozlu imaları bunlar için sağlar.  
-&emsp;&emsp;O halde bu manzara, geç saatlere dair onca keşfimizi sonuca bağlasın; hepsi, hem Gece'nin elleriyle hem Gece'nin uğruna Geceleyin ölmeye yazgılı yalnız bir varlığın unutulmuş hüznünde ve müphem gözlerinde son bulsun. Gecenin-ölüsü olmak.
+&emsp;&emsp;O halde bu ihtimal, geç saatlere dair onca keşfimizi sonuca bağlasın; hepsi, hem Gece'nin elleriyle hem Gece'nin uğruna Geceleyin ölmeye yazgılı yalnız bir varlığın unutulmuş hüznünde ve müphem gözlerinde son bulsun. Gecenin-ölüsü olmak.
 
 <figure>
   <img src="/assets/images/sehidin-gecesi.jpg" alt="Mirza Küçük Han'ın 1920 civarında çekilmiş fotoğrafı">
