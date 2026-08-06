@@ -10,7 +10,7 @@ tags:
   - mohaghegh
   - felsefe
 ---
-*Jason Bahbak Mohaghegh'in Night: A Philosophy of the After-Dark kitabının sonuç bölümünün ("Şehidin Gecesi (kara düşünce)") çevirisidir. Mirza Küçük Han'ın tarihsel ve siyasi bir portresi için Yalçın Küçük'ün Sırlar kitabının dördüncü bölümüne bakılabilir.*
+*Jason Bahbak Mohaghegh'in Night: A Philosophy of the After-Dark kitabının sonuç bölümünün (“Martyr’s Night (dark thought)” ) çevirisidir. Mirza Küçük Han'ın tarihsel ve siyasi bir portresi için Yalçın Küçük'ün Sırlar kitabının dördüncü bölümüne bakılabilir.*
 
 <hr>
 
