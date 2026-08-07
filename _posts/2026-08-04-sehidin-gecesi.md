@@ -5,12 +5,13 @@ author: "Jason Bahbak Mohaghegh"
 date: 2026-08-04
 lang: tr
 dark: true
+image: /assets/images/sehidin-gecesi-kart.jpg
 tags:
   - çeviri
   - mohaghegh
   - felsefe
 ---
-*Jason Bahbak Mohaghegh'in Night: A Philosophy of the After-Dark kitabının sonuç bölümünün (“Martyr’s Night (dark thought)” ) çevirisidir. Mirza Küçük Han'ın tarihsel ve siyasi bir portresi için Yalçın Küçük'ün Sırlar kitabının dördüncü bölümüne bakılabilir.*
+*Jason Bahbak Mohaghegh'in Night: A Philosophy of the After-Dark kitabının sonuç bölümünün (“Martyr’s Night (dark thought)”) çevirisidir. Mirza Küçük Han'ın tarihsel ve siyasi bir portresi için Yalçın Küçük'ün Sırlar kitabının dördüncü bölümüne bakılabilir.*
 
 <hr>
 
@@ -23,7 +24,7 @@ Gece en küçük, en narin tecellisini şehidin gözlerinde bulur.
 &emsp;&emsp;Çünkü Gece bağlıdır trajik örüntülere.
 
 Şehidin gözleri şefkatlidir, hikayenin kötü bir şekilde biteceğini bilecek kadar.  
-&emsp;&emsp;Fakat onun gece-mahvoluşu, bir tür kavramsal masala atılmamızı sağlıyor.  
+&emsp;&emsp;Fakat onun gece-mahvoluşu, bir tür kavramsal masala atılmamızı sağlar.  
 &emsp;&emsp;Çünkü Gece bağlıdır masalcının kederine. (her şey sona erer)
 
 Başta onu ormanlarda tahayyül ederiz Geceleyin-saklanırken, açlıktan yorgun düşmüş, iliklerine kadar üşümüş, nemli toprakta uyurken.  
@@ -40,9 +41,8 @@ Yıllar sonra buluruz onu, esip geçerken şehirlerde Geceleyin-koşmaktadır, n
 &emsp;&emsp;Çünkü Gece bağlıdır ayaklanmaya.
 
 Çeteleri yükseklerdeki açıklıklardan inip feodal derebeylerinin evlerine sızar Geceleyin.  
-&emsp;&emsp;Öfkeye muktedirdir. Zulmedenleri rehin alır ve sağ salim teslimleri karşılığında istediği yüklü meblağlar daha sonra yoksullara, açlara ve ezilmişlere dağıtılır.
-
-Yine de, onun siyasi yönelimleri ilgilendirmez bizi. Yalnızca onun yıkıcı eylemlerini çevreleyen ve görünen o ki başkaları derin uykudayken çekilmiş tek bir görüntüye sızmayı başarmış olan o loşlukla ilişkisinin izini sürmek için bulunuyoruz burada.  
+&emsp;&emsp;Öfkeye muktedirdir. Zulmedenleri rehin alır ve sağ salim teslimleri karşılığında istediği yüklü meblağlar daha sonra yoksullara, açlara ve ezilmişlere dağıtılır.  
+&emsp;&emsp;Yine de, onun siyasi yönelimleri ilgilendirmez bizi. Yalnızca onun yıkıcı eylemlerini çevreleyen ve görünen o ki başkaları derin uykudayken çekilmiş tek bir görüntüye sızmayı başarmış olan o loşlukla ilişkisinin izini sürmek için bulunuyoruz burada.  
 &emsp;&emsp;Radikal yumuşaklığının sırrı için buradayız.  
 &emsp;&emsp;Çünkü Gece bağlıdır hem mülkiyete hem mülksüzlüğe.
 
