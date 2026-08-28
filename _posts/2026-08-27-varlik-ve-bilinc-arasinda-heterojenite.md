@@ -12,14 +12,16 @@ tags:
   - felsefe
 permalink: /2026/08/27/varlik-ve-bilinc-arasinda-heterojenite/
 ---
-<hr>
 
-Metin içinde parantez içinde verilen kısaltmalar şu kaynaklara işaret etmektedir:  
-**DI:** Karl Marx & Friedrich Engels, *Die deutsche Ideologie* (Alman İdeolojisi, 1845–1846).  
-**EP:** Karl Marx, *Misère de la philosophie* / *Das Elend der Philosophie* (Felsefenin Sefaleti, 1847).  
-**MEW:** Karl Marx & Friedrich Engels, *Werke* (Dietz Verlag, Berlin).  
-**MECW:** Karl Marx & Friedrich Engels, *Collected Works* (Lawrence & Wishart / International Publishers, New York).  
-**H I:** Michel Henry, *Marx: I. Une philosophie de la réalité* (Paris: Gallimard, 1976; İngilizce çevirisi: *Marx: A Philosophy of Human Reality*, Indiana University Press, 1983).
+*Bu metin, Reiner Schürmann'ın Malte Fabian Rauch ve Nicolas Schneider editörlüğünde yayımlanan **Reading Marx: On Transcendental Materialism** (Zürih: Diaphanes, 2021, ss. 91–95) adlı eserinde yer alan 9. Dersin ("The Heterogeneity between Being and Consciousness" / "Varlık ve Bilinç Arasında Heterojenite") çevirisidir.*
+
+> **Çevirmenin Notu (Kısaltmalar ve Metin Referansları):**  
+> Metin içinde parantez içinde verilen kısaltmalar şu kaynaklara işaret etmektedir:  
+> * **DI:** Karl Marx & Friedrich Engels, *Die deutsche Ideologie* (Alman İdeolojisi, 1845–1846).  
+> * **EP:** Karl Marx, *Misère de la philosophie* / *Das Elend der Philosophie* (Felsefenin Sefaleti, 1847).  
+> * **MEW:** Karl Marx & Friedrich Engels, *Werke* (Dietz Verlag, Berlin).  
+> * **MECW:** Karl Marx & Friedrich Engels, *Collected Works* (Lawrence & Wishart / International Publishers, New York).  
+> * **H I:** Michel Henry, *Marx: I. Une philosophie de la réalité* (Paris: Gallimard, 1976; İngilizce çevirisi: *Marx: A Philosophy of Human Reality*, Indiana University Press, 1983).
 
 <hr>
 
