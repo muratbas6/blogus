@@ -13,7 +13,7 @@ tags:
 permalink: /2026/08/27/varlik-ve-bilinc-arasinda-heterojenite/
 ---
 
-*Bu metin, Reiner Schürmann'ın Malte Fabian Rauch ve Nicolas Schneider editörlüğünde yayımlanan **Reading Marx: On Transcendental Materialism** (Zürih: Diaphanes, 2021, ss. 91–95) adlı eserinde yer alan 9. Dersin ("The Heterogeneity between Being and Consciousness" / "Varlık ve Bilinç Arasında Heterojenite") çevirisidir.*
+*Bu metin, Reiner Schürmann'ın Malte Fabian Rauch ve Nicolas Schneider editörlüğünde yayımlanan **Reading Marx: On Transcendental Materialism** (Zürih: Diaphanes, 2021, ss. 91–95) adlı eserinde yer alan 9. Dersin ("The Heterogeneity between Being and Consciousness") çevirisidir.*
 
 **Çevirmenin Notu (Kısaltmalar ve Metin Referansları):**  
 Metin içinde parantez içinde verilen kısaltmalar şu kaynaklara işaret etmektedir:  
