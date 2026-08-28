@@ -6,7 +6,18 @@
   {%- include theme_init.html -%}
 
   {% seo title=false %}
-  <title>{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}</title>
+  {%- if page.title -%}
+    {%- if page.author -%}
+      {%- assign full_title = page.title | append: " — " | append: page.author -%}
+    {%- else -%}
+      {%- assign full_title = page.title -%}
+    {%- endif -%}
+  <title>{{ full_title }} | {{ site.title }}</title>
+  <meta property="og:title" content="{{ full_title }}">
+  <meta name="twitter:title" content="{{ full_title }}">
+  {%- else -%}
+  <title>{{ site.title }}</title>
+  {%- endif -%}
 
   <link rel="preconnect" href="https://cdn.jsdelivr.net">
   <link rel="icon" type="image/x-icon" href="{{ "/favicon.ico" | relative_url }}">

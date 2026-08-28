@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Varlık ve Bilinç Arasında Heterojenite - Reiner Schürmann"
+title: "Varlık ve Bilinç Arasında Heterojenite"
 author: "Reiner Schürmann"
 date: 2026-08-27
 lang: tr
