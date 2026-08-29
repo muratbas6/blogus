@@ -4,7 +4,8 @@ title: "Heidegger'i Okumak"
 author: "Reiner Schürmann"
 date: 2026-08-29
 lang: tr
-image: /assets/images/heidegger-i-okumak.png
+description: "Japoncada da artık erişilebilen Dört Seminer'den birinde, Heidegger, doğru anlaşıldığı takdirde tüm eserlerinin nasıl okunması gerektiğine dair kısa bir açıklamada bulunur."
+image: /assets/images/heidegger-i-okumak.jpg
 tags:
   - çeviri
   - schürmann
