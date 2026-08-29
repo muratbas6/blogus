@@ -31,10 +31,6 @@ Buradaki hermeneutik ikilem dikkate değerdir: Heidegger'i ileriye doğru, yani 
 
 Heidegger'in 1969'da Le Thor'da düzenlenen seminer sırasında yaptığı bu kısa metodolojik yorumun engin değeri budur. O, yazılarının seyri boyunca atılan iki adımın—"varlığın anlamından (*Sinn*)", "varlığın hakikatine (*aletheia*)", oradan da "varlığın topolojisine"—her defasında düşüncesini uygun başlangıç noktasına yaklaştırdığını söyler. Eğer topoloji, Heidegger'in başından beri sürdürdüğü tek soruya, varlık sorusuna, uygun erişimi sağlıyorsa, o zaman eserlerinin ileriye doğru değil, geriye doğru okunması gerektiği aşikârdır.
 
-<hr>
-
-### Dipnotlar
-
 [^1]: Martin Heidegger, *Vier Seminare* (Frankfurt/M.: Vittorio Klostermann, 1977), s. 73.
 [^2]: Bu iki alıntı Martin Heidegger'in şu eserlerindendir: *Aus der Erfahrung des Denkens* (Pfullingen: G. Neske, 1954), s. 23; *Poetry, Language, Thought*, İng. çev. A. Hofstadter (New York: Harper and Row, 1971), s. 12. 1947 yılında yazılan bu metin, Heidegger'in "varlığın topolojisi"nden bahsettiği ilk metindir.
 [^3]: Anlama (*Verständnis*), "*vorstehen*'in kökensel anlamıyla ele alınmalıdır: karşısında durmak, boy ölçüşebilmek, kişinin kendisini karşısında bulduğu şeyi taşıyabilecek/sürdürebilecek bir kamete sahip olmak" (Martin Heidegger, *Vier Seminare*, s. 72). Ayrıca bkz. Martin Heidegger, *Sein und Zeit* (Tübingen: Max Niemeyer, 1957), s. 143; *Being and Time*, İng. çev. J. Macquarrie ve E. Robinson (New York: Harper and Row, 1962), s. 183.
