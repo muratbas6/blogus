@@ -160,5 +160,5 @@ köpek yapabilsin diye
 hayalin erişemediğini.
 
 Oysa ayı kapanının tek istediği  
-bacak olmaktı etrafına  
+bacak olmak iken etrafına  
 kapandığı.
