@@ -118,7 +118,7 @@ arka ayağıyla.
 
 Burası kırsal  
 Finlandiya, savaş zamanı,  
-çağırmaya için yok veteriner.  
+çağırmaya yok veteriner.  
 Ailenin köpeği - cömertçe  
 veya içgüdüsel olarak - başlar yalamaya  
 iltihaplı yarayı,  
