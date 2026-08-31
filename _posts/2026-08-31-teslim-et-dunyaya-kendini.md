@@ -26,7 +26,7 @@ paramparça edilmeyi
 bir anda ağır  
 bir şey tarafından, misal bir piyano.  
 Kaz özenle  
-korudu - bir kapı eşiğini, annesini  
+korumuştu - bir kapı eşiğini, annesini  
 ve bir kemik yığınını içeren -  
 hayalini.  
 Düşledim  
