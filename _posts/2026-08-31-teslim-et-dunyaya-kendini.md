@@ -29,7 +29,7 @@ Kaz özenle
 korumuştu - bir kapı eşiğini, annesini  
 ve bir kemik yığınını içeren -  
 hayalini.  
-Düşledim  
+Düşledim.  
 hiçbir hayalimin  
 olmamasını, ve  
 bundandır ki  
@@ -65,7 +65,7 @@ Tak tak.
 *Kim o* - yardım, lütfen,  
 Tuzağa yakalandım  
 kendime yazdığım  
-bir senaryonun içinde.  
+bir senaryonun içine.  
 Neredeyse hissetmiyorum  
 hiçbir şey altında  
 bu absürd kıyafetlerin  
@@ -118,7 +118,7 @@ arka ayağıyla.
 
 Burası kırsal  
 Finlandiya, savaş zamanı,  
-çağırmak için yok veteriner.  
+çağırmaya için yok veteriner.  
 Ailenin köpeği - cömertçe  
 veya içgüdüsel olarak - başlar yalamaya  
 iltihaplı yarayı,  
@@ -159,4 +159,6 @@ ve usluca oturmuştu ki
 köpek yapabilsin diye  
 hayalin erişemediğini.
 
-Oysa ayı kapanının tek istediği, etrafına kapandığı bacak olmaktı.
+Oysa ayı kapanının tek istediği  
+bacak olmaktı etrafına  
+kapandığı.
