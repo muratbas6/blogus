@@ -6,4 +6,18 @@ layout: default
 <h1>{{ site.title }}</h1>
 <p>{{ site.motto }}</p>
 
-{%- include menu_item.html collection=site.data.menu.entries -%}
+<div class="gezinme-satiri">
+  <nav class="menu">
+    {%- for item in site.data.menu.entries -%}
+      {%- if item.url != false %}<a href="{{ item.url }}">{{ item.title }}</a>{% endif -%}
+    {%- endfor -%}
+  </nav>
+  {%- include theme_toggle.html -%}
+</div>
+
+{%- for item in site.data.menu.entries -%}
+  {%- if item.post_list == true -%}
+<h2 class="liste-baslik">{{ item.title }}</h2>
+{%- include post_list.html -%}
+  {%- endif -%}
+{%- endfor -%}

@@ -4,16 +4,19 @@
   <body>
     <main class="page-content" aria-label="Content">
       <div class="w">
+        {%- unless page.layout == 'home' -%}
+        <div class="gezinme-satiri">
+          <nav class="kirinti" aria-label="Kırıntı gezinmesi">
+            <a href="{{ "/" | relative_url }}">{{ site.theme_config.back_home_text }}</a>
+            {%- if page.layout == 'tag' %} / <a href="{{ "/tags/" | relative_url }}">tags</a>{% endif -%}
+          </nav>
+          {%- include theme_toggle.html -%}
+        </div>
+        {%- endunless -%}
         {{ content }}
-        <p class="site-footer">
-          {%- unless page.layout == 'post' -%}
-            {%- include theme_toggle.html -%} · 
-          {%- endunless -%}
-          <a href="{{ "/feed.xml" | relative_url }}">rss</a>
-        </p>
       </div>
     </main>
-    {%-if site.goat_counter-%}
+    {%-if site.goat_counter and jekyll.environment == "production"-%}
       {%-include goat_counter.html-%}
     {%-endif-%}
   </body>

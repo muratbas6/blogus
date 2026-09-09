@@ -10,8 +10,13 @@
   var swLight = document.getElementById('sw-light');
   var swDark  = document.getElementById('sw-dark');
 
+  function isDark(){
+    if (html.dataset.theme) return html.dataset.theme === 'dark';
+    return window.matchMedia('(prefers-color-scheme: dark)').matches;
+  }
+
   function update(){
-    var dark = html.dataset.theme === 'dark';
+    var dark = isDark();
     swLight.className = dark ? '' : 'on';
     swDark.className  = dark ? 'on' : '';
   }
@@ -19,10 +24,13 @@
   update();
 
   btn.addEventListener('click', function(){
-    var newTheme = html.dataset.theme === 'dark' ? 'light' : 'dark';
-    html.dataset.theme = newTheme;
-    localStorage.setItem('theme', newTheme);
+    html.dataset.theme = isDark() ? 'light' : 'dark';
+    try { localStorage.setItem('theme', html.dataset.theme); } catch (e) {}
     update();
+  });
+
+  window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', function(){
+    if (!html.dataset.theme) update();
   });
 })();
 </script>

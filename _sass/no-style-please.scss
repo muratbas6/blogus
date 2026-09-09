@@ -1,39 +1,65 @@
+// ---------------------------------------------------------------
+// Renk paleti
+// ---------------------------------------------------------------
 :root {
-  --bg: #f0e6d8;
-  --bg-soft: #e6d8c0;
-  --fg: #2a2520;
-  --fg-muted: #6a7a8a;
-  --link: #c1121f;
+  // Tek ton monokrom palet. Tüm renkler OKLCH uzayında 40 derece tonundan
+  // türetildi, açıklıkları hedeflenen APCA kontrastını tutturacak şekilde
+  // çözüldü. Vurgu doygunluğu 0.10, yani afişteki tablonun tavanının altında.
+  // Afişteki Maleviç tablosundan türetildi. Zemin tablonun en geniş alanı
+  // olan kum bandı, bağlantılar gökyüzünün laciverdi, vurgu süvarilerin
+  // kızılı. Tonlar tablodan, açıklıklar okunabilirlik hedeflerinden.
+  --bg: #faefdc;
+  --bg-soft: #eedfc7;
+  --fg: #0e0800;
+  --fg-muted: #584d39;
+  --link: #0047b9;
+  --accent: #a84100;
+
+  // Boşluk ölçeği: her boşluk bu beş değerden biri olmalı
+  --s1: 0.4rem;
+  --s2: 0.8rem;
+  --s3: 1.6rem;
+  --s4: 2.4rem;
+  --s5: 4rem;
 }
 
-html[data-theme="dark"] {
-  --bg: #1a1814;
-  --bg-soft: #2c2a26;
-  --fg: #e0d8cc;
-  --fg-muted: #8a9aaa;
-  --link: #ff4a3d;
+@mixin dark-palette {
+  // Gece teması tablonun koyu zeytin bandı. Bağlantı iki temada da
+  // lacivert kalıyor, rol değişmiyor.
+  --bg: #1d1a09;
+  --bg-soft: #2b270f;
+  --fg: #faf0dd;
+  --fg-muted: #e2d4bd;
+  --link: #bed5fd;
+  --accent: #ffb392;
 }
 
-.ayrac { text-align: center; }
+// Elle seçilen gece teması
+html[data-theme="dark"] { @include dark-palette; }
 
-figure { margin: 2.5rem 0; }
-figcaption {
-  text-align: center;
-  font-weight: bold;
-  margin-top: 0.9rem;
+// Elle seçim yapılmadıysa işletim sisteminin tercihine uy
+@media (prefers-color-scheme: dark) {
+  html:not([data-theme="light"]) { @include dark-palette; }
 }
 
-// Tema seçimi kapalı, sabit gece sayfaları (frontmatter: dark: true)
-html[data-night] {
+// frontmatter'da dark: true olan yazılar saf siyah zeminde açılır.
+// Ama bu yalnızca gece teması etkinken geçerli: okuyucu gündüze geçerse
+// sayfa sitenin normal açık temasına döner, siyah zeminde açık metin kalmaz.
+html[data-night][data-theme="dark"] {
   --bg: #000;
   --bg-soft: #111;
 }
 
-html, body, *, *::before, *::after {
-  transition: background-color .3s;
+// ---------------------------------------------------------------
+// Temel
+// ---------------------------------------------------------------
+// Geçiş yalnızca body üstünde. html'e uygulanınca sayfa zemini
+// tema değişiminde takılı kalabiliyordu, siyah zeminde koyu metin çıkıyordu.
+body {
+  transition: background-color .3s, color .3s;
 }
 @media (prefers-reduced-motion: reduce) {
-  html, body, *, *::before, *::after { transition: none !important; }
+  body { transition: none; }
 }
 
 html, body { background: var(--bg); }
@@ -41,7 +67,7 @@ html, body { background: var(--bg); }
 body {
   color: var(--fg);
   font-family: monospace;
-  font-size: 18px;
+  font-size: 16px;
   line-height: 1.6;
   margin: 0;
   overflow-wrap: break-word;
@@ -49,42 +75,55 @@ body {
 
 a { color: var(--link); }
 
-h1, h2, h3, h4, h5, h6 { font-weight: normal; }
-h1 {
-  font-size: clamp(1.25rem, 3.2vw, 1.6rem);
-  line-height: 1.35;
-}
-h2, h3, h4, h5, h6 { margin-top: 1.6rem; margin-bottom: 0.6rem; }
-
-hr { margin: 2rem 0; border: 0; border-top: 1px solid var(--fg-muted); }
-p { margin: 0.8rem 0; }
-li { margin: 0.4rem 0; }
-
 ::selection { background: var(--link); color: var(--bg); }
 
-.w {
-  max-width: 880px;
-  margin: 0 auto;
-  padding: 4rem 2rem;
+.page-content {
+  display: flex;
+  min-height: 100vh;
 }
 
-.post-meta {
-  color: var(--fg-muted);
-  font-size: 0.85em;
+.w {
+  max-width: 660px;
+  margin: 0;
+  padding: var(--s5) var(--s4) var(--s5) var(--s5);
+  // Kısa sayfalarda altbilgi içeriğe yapışmasın, sayfanın altına insin
   display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 0.3em 0.5em;
+  flex-direction: column;
+  flex: 1;
 }
-.post-meta .sw { font-size: 1em; }
+
+// ---------------------------------------------------------------
+// Metin
+// ---------------------------------------------------------------
+h1, h2, h3, h4, h5, h6 { font-weight: normal; }
+h1 {
+  font-size: clamp(1.4rem, 3.5vw, 1.85rem);
+  line-height: 1.3;
+  margin: 0 0 var(--s2);
+}
+h2 { font-size: 1.35rem; }
+h3 { font-size: 1.15rem; }
+h4, h5, h6 { font-size: 1rem; }
+h2, h3, h4, h5, h6 {
+  line-height: 1.35;
+  margin-top: var(--s4);
+  margin-bottom: var(--s1);
+}
+
+p { margin: var(--s2) 0; }
+li { margin: var(--s1) 0; }
+ul, ol { padding-left: var(--s3); }
+
+hr { margin: var(--s4) 0; border: 0; border-top: 1px solid var(--fg-muted); }
 
 blockquote {
   font-style: italic;
-  border-left: 2px solid var(--link);
-  margin: 1.5rem 0;
-  padding: 0 1rem;
+  border-left: 2px solid var(--accent); // vurgu rengi: süvarilerin kızılı
+  margin: var(--s3) 0;
+  padding: 0 var(--s2);
   color: var(--fg-muted);
   p { margin: 0; }
+  p + p { margin-top: var(--s2); }
 }
 
 code {
@@ -94,76 +133,143 @@ code {
   padding: .1rem .3rem;
 }
 
-pre code { display: block; overflow-x: auto; padding: 1rem; }
-
-img { max-width: 100%; display: block; margin: 0 auto; }
-
-.banner { width: 65%; max-width: 400px; height: auto; }
+pre code { display: block; overflow-x: auto; padding: var(--s2); }
 
 table { width: 100%; border-collapse: collapse; }
-table, th, td { border: 1px solid var(--fg-muted); padding: 0.4rem; }
+table, th, td { border: 1px solid var(--fg-muted); padding: var(--s1); }
 
-ul, ol { padding-left: 1.5rem; }
+.ayrac { text-align: center; }
 
+// ---------------------------------------------------------------
+// Görseller
+// ---------------------------------------------------------------
+img { max-width: 100%; display: block; margin: 0 auto; }
+
+.banner {
+  width: 70%;
+  height: auto;
+  margin-left: 0;
+  margin-bottom: var(--s2);
+}
+
+figure { margin: var(--s4) 0; }
+figcaption {
+  text-align: center;
+  font-weight: bold;
+  margin-top: var(--s2);
+}
+
+// ---------------------------------------------------------------
+// Dipnotlar: burada kaynakça duruyor, ıskarta bilgi değil
+// ---------------------------------------------------------------
 sup {
   line-height: 0;
+  a { display: inline-block; padding: 0 var(--s1); }
 }
 
 .footnotes {
-  margin-top: 3rem;
-  font-size: 0.8em;
-  color: var(--fg-muted);
+  margin-top: var(--s5);
+  font-size: 0.9em;
+  color: var(--fg);
   &::before {
     content: "";
     display: block;
     width: 6rem;
     border-top: 1px solid var(--fg-muted);
-    margin-bottom: 1rem;
+    margin-bottom: var(--s2);
   }
+  a[href^="#fnref"] {
+    display: inline-block;
+    padding: var(--s1) var(--s2);
+  }
+}
+
+// ---------------------------------------------------------------
+// Üst çubuk, yazı künyesi ve tema düğmesi
+// ---------------------------------------------------------------
+.gezinme-satiri {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: var(--s3);
+}
+
+// Kırıntı satırı yazının üstünde, menü satırı anasayfada motto ile liste arasında
+.kirinti { margin-bottom: 0; }
+.w > .gezinme-satiri:first-child { margin-bottom: var(--s4); }
+
+.post-meta {
+  color: var(--fg-muted);
+  font-size: 0.9em;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--s1) var(--s2);
 }
 
 .sw {
   display: inline-flex; gap: 4px; cursor: pointer; user-select: none;
-  background: none; border: none; padding: 0;
-  font-family: monospace; font-size: 0.85em; color: var(--fg-muted);
+  background: none; border: none;
+  padding: var(--s1) 0;
+  font-family: monospace; font-size: 0.9em; color: var(--fg-muted);
   span { color: var(--fg-muted); }
   span.on { color: var(--fg); }
-  &:focus { outline: 1px solid var(--link); }
+  // Odak çerçevesi yalnızca klavyeyle gelindiğinde, fare tıklamasından sonra değil
+  &:focus-visible { outline: 1px solid var(--link); outline-offset: 2px; }
 }
 
-.posts {
+// ---------------------------------------------------------------
+// Yazı listeleri
+// ---------------------------------------------------------------
+.posts, .etiketler {
   list-style: none;
   padding-left: 0;
+  margin: var(--s1) 0 0;
 }
+
+// Anasayfa gezinmesi: iki adres yan yana, tek satır
+.menu {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--s3);
+}
+.w > p + .gezinme-satiri { margin: var(--s2) 0; }
+
+// Yazı listesinin başlığı. Adres değil, etiket.
+.liste-baslik {
+  font-size: 0.9em;
+  font-weight: normal;
+  color: var(--fg-muted);
+  letter-spacing: .12em;
+  margin: var(--s2) 0 var(--s1);
+}
+
+.etiketler li { margin: var(--s1) 0; }
+.etiketler span { color: var(--fg-muted); font-size: 0.9em; }
 
 .posts li {
   display: flex;
   align-items: baseline;
-  gap: 0.8rem;
-  margin-bottom: 0.4rem;
+  gap: var(--s2);
+  margin-bottom: var(--s1);
 }
 
 .posts li span {
   color: var(--fg-muted);
-  font-size: 0.8em;
+  font-size: 0.9em;
   flex-shrink: 0;
   white-space: nowrap;
 }
 
-.posts li a {
-  flex-grow: 1;
-}
+.posts li a { flex-grow: 1; }
 
-.site-footer {
-  margin-top: 4rem;
-  font-size: 0.8em;
-  color: var(--fg-muted);
-}
-
+// ---------------------------------------------------------------
+// Altbilgi ve yazılar arası gezinme
+// ---------------------------------------------------------------
 .post-nav {
   display: flex;
   justify-content: space-between;
-  gap: 2rem;
+  gap: var(--s4);
 }
 
 .post-nav-item {
@@ -175,7 +281,7 @@ sup {
 }
 
 .post-nav-label {
-  font-size: 0.75em;
+  font-size: 0.9em;
   color: var(--fg-muted);
 }
 
@@ -184,15 +290,23 @@ sup {
   margin-left: auto;
 }
 
+// ---------------------------------------------------------------
+// Dar ekran
+// ---------------------------------------------------------------
 @media (max-width: 600px) {
-  .post-nav { flex-direction: column; gap: 1rem; }
+  .w { padding: var(--s4) var(--s3); }
+
+  // Geniş tablo sayfayı taşırmasın, kendi içinde kaysın
+  table { display: block; overflow-x: auto; }
+
+  // Tarih başlığın yerini yemesin diye alt alta
+  .posts li {
+    flex-direction: column;
+    gap: var(--s1);
+    margin-bottom: var(--s3);
+  }
+
+  .post-nav { flex-direction: column; gap: var(--s3); }
   .post-nav-item { max-width: 100%; }
   .post-nav-older { text-align: left; margin-left: 0; }
-}
-
-
-@media (max-width: 600px) {
-  .w { padding: 2rem 1.2rem; }
-  body { font-size: 16px; }
-  .banner { width: 90%; max-width: 100%; }
 }

@@ -1,10 +1,10 @@
 <script>
 (function() {
   var html = document.documentElement;
-  if (html.hasAttribute('data-night')) return;
-  var saved = localStorage.getItem('theme');
-  if (saved) {
-    html.dataset.theme = saved;
-  }
+  var saved = null;
+  try { saved = localStorage.getItem('theme'); } catch (e) {}
+  // Okuyucu elle bir tema seçtiyse o kazanır, sayfanın gece isteği dahil.
+  if (saved) { html.dataset.theme = saved; return; }
+  // Seçim yoksa gece sayfası siyah açılır, sunucu zaten öyle işaretledi.
 })();
 </script>
